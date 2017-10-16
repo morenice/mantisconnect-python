@@ -23,7 +23,10 @@ See sample/sample.py
  - python > 3.5
  - zeep
 
-test version: mantis 1.2.11
+ ```
+ $ pip3 install mantisconnect
 
-# TODO
- - pip
+ ```
+
+## Test version
+ - mantis 1.2.11
