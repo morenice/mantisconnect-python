@@ -60,6 +60,10 @@ class Project:
 
         if self.mc:
             self.p_id = self.mc.request_project(project_name)
+            if self.p_id <= 0:
+                msg = "Not found project id {0}(name:{1})".format(self.p_id, project_name)
+                raise IndexError(msg)
+
             for f in self.mc.request_filter_get(self.p_id):
                 self.filter_list.append(Filter(f.name, f.id))
 

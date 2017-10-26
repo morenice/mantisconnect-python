@@ -2,7 +2,7 @@ import sys
 
 from mantisconnect.simple_project import Issue
 from mantisconnect.simple_project import SimpleProject
-from mantisconnect.connector import MantisSoapConnector
+from mantisconnect.connector_interface import create_mantis_soap_connector
 
 
 if __name__ == "__main__":
@@ -10,7 +10,7 @@ if __name__ == "__main__":
     username = "user"
     password = "oooops"
 
-    mc = MantisSoapConnector(url)
+    mc = create_mantis_soap_connector(url)
     mc.set_user_passwd(username, password)
     mc.connect()
 
@@ -28,3 +28,5 @@ if __name__ == "__main__":
 
     # Write your code
     #
+    for issue in issue_list:
+        print("{0} {1}".format(issue.issue_id, issue.summary))
