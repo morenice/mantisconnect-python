@@ -12,6 +12,7 @@ Usage
 See sample/sample.py
 
 ::
+
     mc = MantisSoapConnector("url")
     mc.set_user_passwd("username", "password")
     mc.connect()
@@ -28,6 +29,7 @@ Requirement
  - zeep
 
 ::
+
     $ pip3 install mantisconnect
 
 
